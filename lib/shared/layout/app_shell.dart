@@ -9,6 +9,15 @@ class AppShell extends StatelessWidget {
 
   static const double tabletBreakpoint = 600;
 
+  static const _destinations = <_NavItem>[
+    _NavItem(Icons.folder_open_outlined, Icons.folder_open, 'Source'),
+    _NavItem(Icons.movie_outlined, Icons.movie, 'Video'),
+    _NavItem(Icons.audiotrack_outlined, Icons.audiotrack, 'Audio'),
+    _NavItem(Icons.subtitles_outlined, Icons.subtitles, 'Subtitles'),
+    _NavItem(Icons.bookmarks_outlined, Icons.bookmarks, 'Presets'),
+    _NavItem(Icons.queue_play_next_outlined, Icons.queue_play_next, 'Queue'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
@@ -16,43 +25,25 @@ class AppShell extends StatelessWidget {
 
     if (useRail) {
       return Scaffold(
-        body: Row(
-          children: [
-            NavigationRail(
-              extended: width >= 840,
-              selectedIndex: navigationShell.currentIndex,
-              onDestinationSelected: (i) => _onSelect(i),
-              destinations: const [
-                NavigationRailDestination(
-                  icon: Icon(Icons.folder_open_outlined),
-                  selectedIcon: Icon(Icons.folder_open),
-                  label: Text('Source'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.movie_outlined),
-                  selectedIcon: Icon(Icons.movie),
-                  label: Text('Video'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.audiotrack_outlined),
-                  selectedIcon: Icon(Icons.audiotrack),
-                  label: Text('Audio'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.subtitles_outlined),
-                  selectedIcon: Icon(Icons.subtitles),
-                  label: Text('Subtitles'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.queue_play_next_outlined),
-                  selectedIcon: Icon(Icons.queue_play_next),
-                  label: Text('Queue'),
-                ),
-              ],
-            ),
-            const VerticalDivider(width: 1, thickness: 1),
-            Expanded(child: navigationShell),
-          ],
+        body: SafeArea(
+          child: Row(
+            children: [
+              NavigationRail(
+                extended: width >= 840,
+                selectedIndex: navigationShell.currentIndex,
+                onDestinationSelected: _onSelect,
+                destinations: _destinations
+                    .map((d) => NavigationRailDestination(
+                          icon: Icon(d.icon),
+                          selectedIcon: Icon(d.selectedIcon),
+                          label: Text(d.label),
+                        ))
+                    .toList(),
+              ),
+              const VerticalDivider(width: 1, thickness: 1),
+              Expanded(child: navigationShell),
+            ],
+          ),
         ),
       );
     }
@@ -61,34 +52,14 @@ class AppShell extends StatelessWidget {
       body: navigationShell,
       bottomNavigationBar: NavigationBar(
         selectedIndex: navigationShell.currentIndex,
-        onDestinationSelected: (i) => _onSelect(i),
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.folder_open_outlined),
-            selectedIcon: Icon(Icons.folder_open),
-            label: 'Source',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.movie_outlined),
-            selectedIcon: Icon(Icons.movie),
-            label: 'Video',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.audiotrack_outlined),
-            selectedIcon: Icon(Icons.audiotrack),
-            label: 'Audio',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.subtitles_outlined),
-            selectedIcon: Icon(Icons.subtitles),
-            label: 'Subtitles',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.queue_play_next_outlined),
-            selectedIcon: Icon(Icons.queue_play_next),
-            label: 'Queue',
-          ),
-        ],
+        onDestinationSelected: _onSelect,
+        destinations: _destinations
+            .map((d) => NavigationDestination(
+                  icon: Icon(d.icon),
+                  selectedIcon: Icon(d.selectedIcon),
+                  label: d.label,
+                ))
+            .toList(),
       ),
     );
   }
@@ -99,4 +70,11 @@ class AppShell extends StatelessWidget {
       initialLocation: index == navigationShell.currentIndex,
     );
   }
+}
+
+class _NavItem {
+  const _NavItem(this.icon, this.selectedIcon, this.label);
+  final IconData icon;
+  final IconData selectedIcon;
+  final String label;
 }

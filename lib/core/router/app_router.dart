@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:transcoder/features/audio/presentation/audio_screen.dart';
+import 'package:transcoder/features/presets/presentation/presets_screen.dart';
 import 'package:transcoder/features/queue/presentation/queue_screen.dart';
 import 'package:transcoder/features/source/presentation/source_screen.dart';
 import 'package:transcoder/features/subtitles/presentation/subtitles_screen.dart';
@@ -69,6 +70,17 @@ GoRouter appRouter(AppRouterRef ref) {
           StatefulShellBranch(
             routes: [
               GoRoute(
+                path: AppRoutes.presets,
+                name: AppRoutes.presetsName,
+                pageBuilder: (context, state) => const NoTransitionPage(
+                  child: PresetsScreen(),
+                ),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
                 path: AppRoutes.queue,
                 name: AppRoutes.queueName,
                 pageBuilder: (context, state) => const NoTransitionPage(
@@ -93,6 +105,8 @@ abstract final class AppRoutes {
   static const audioName = 'audio';
   static const subtitles = '/subtitles';
   static const subtitlesName = 'subtitles';
+  static const presets = '/presets';
+  static const presetsName = 'presets';
   static const queue = '/queue';
   static const queueName = 'queue';
 }

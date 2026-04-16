@@ -1,26 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'source_controller.dart';
+part of 'preset_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$sourceControllerHash() => r'af49727133c8099ad325a779d020e9b17863f117';
+String _$presetControllerHash() => r'480790a084413126d8e9dfc6a639150a129df482';
 
-/// See also [SourceController].
-@ProviderFor(SourceController)
-final sourceControllerProvider =
-    NotifierProvider<SourceController, SourceState>.internal(
-  SourceController.new,
-  name: r'sourceControllerProvider',
+/// See also [PresetController].
+@ProviderFor(PresetController)
+final presetControllerProvider =
+    NotifierProvider<PresetController, PresetListState>.internal(
+  PresetController.new,
+  name: r'presetControllerProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$sourceControllerHash,
+      : _$presetControllerHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$SourceController = Notifier<SourceState>;
+typedef _$PresetController = Notifier<PresetListState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

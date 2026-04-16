@@ -5,6 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:transcoder/core/database/collections/video_metadata.dart';
 import 'package:transcoder/core/database/providers/application_isar_provider.dart';
 import 'package:transcoder/core/utils/media_probe_parser.dart';
+import 'package:transcoder/core/utils/platform_support.dart';
 import 'package:transcoder/core/utils/probe_json_codec.dart';
 import 'package:transcoder/features/source/domain/source_state.dart';
 

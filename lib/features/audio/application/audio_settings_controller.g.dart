@@ -1,26 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'source_controller.dart';
+part of 'audio_settings_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$sourceControllerHash() => r'af49727133c8099ad325a779d020e9b17863f117';
+String _$audioSettingsControllerHash() =>
+    r'0839b857f3065ff0ef1053edb19078c12de15e14';
 
-/// See also [SourceController].
-@ProviderFor(SourceController)
-final sourceControllerProvider =
-    NotifierProvider<SourceController, SourceState>.internal(
-  SourceController.new,
-  name: r'sourceControllerProvider',
+/// See also [AudioSettingsController].
+@ProviderFor(AudioSettingsController)
+final audioSettingsControllerProvider =
+    NotifierProvider<AudioSettingsController, AudioSettingsState>.internal(
+  AudioSettingsController.new,
+  name: r'audioSettingsControllerProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$sourceControllerHash,
+      : _$audioSettingsControllerHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$SourceController = Notifier<SourceState>;
+typedef _$AudioSettingsController = Notifier<AudioSettingsState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

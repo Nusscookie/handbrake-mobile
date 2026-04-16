@@ -1,0 +1,321 @@
+{
+  "categories": [
+    {
+      "name": "General",
+      "presets": [
+        {
+          "name": "Fast 1080p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "veryfast",
+            "tune": "none",
+            "profile": "main",
+            "level": "l41",
+            "qualityMode": "constantQuality",
+            "crf": 22,
+            "averageBitrate": 5000,
+            "frameRate": "fps30",
+            "width": 1920,
+            "height": 1080,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        },
+        {
+          "name": "HQ 1080p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "slow",
+            "tune": "none",
+            "profile": "high",
+            "level": "l41",
+            "qualityMode": "constantQuality",
+            "crf": 18,
+            "averageBitrate": 8000,
+            "frameRate": "fps30",
+            "width": 1920,
+            "height": 1080,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        },
+        {
+          "name": "HQ 720p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "slow",
+            "tune": "none",
+            "profile": "high",
+            "level": "l31",
+            "qualityMode": "constantQuality",
+            "crf": 19,
+            "averageBitrate": 5000,
+            "frameRate": "fps30",
+            "width": 1280,
+            "height": 720,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        },
+        {
+          "name": "Fast 480p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "veryfast",
+            "tune": "none",
+            "profile": "main",
+            "level": "l31",
+            "qualityMode": "constantQuality",
+            "crf": 22,
+            "averageBitrate": 2500,
+            "frameRate": "fps30",
+            "width": 854,
+            "height": 480,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        },
+        {
+          "name": "HQ 2160p60 4K",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x265",
+            "preset": "slow",
+            "tune": "none",
+            "profile": "main10",
+            "level": "l51",
+            "qualityMode": "constantQuality",
+            "crf": 20,
+            "averageBitrate": 25000,
+            "frameRate": "fps60",
+            "width": 3840,
+            "height": 2160,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Devices — Apple",
+      "presets": [
+        {
+          "name": "Apple 1080p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "medium",
+            "tune": "none",
+            "profile": "high",
+            "level": "l40",
+            "qualityMode": "constantQuality",
+            "crf": 20,
+            "averageBitrate": 6000,
+            "frameRate": "fps30",
+            "width": 1920,
+            "height": 1080,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        },
+        {
+          "name": "Apple 720p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "medium",
+            "tune": "none",
+            "profile": "main",
+            "level": "l31",
+            "qualityMode": "constantQuality",
+            "crf": 20,
+            "averageBitrate": 3000,
+            "frameRate": "fps30",
+            "width": 1280,
+            "height": 720,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Devices — Android",
+      "presets": [
+        {
+          "name": "Android 1080p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "medium",
+            "tune": "none",
+            "profile": "main",
+            "level": "l40",
+            "qualityMode": "constantQuality",
+            "crf": 22,
+            "averageBitrate": 5000,
+            "frameRate": "fps30",
+            "width": 1920,
+            "height": 1080,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        },
+        {
+          "name": "Android 720p30",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "medium",
+            "tune": "none",
+            "profile": "main",
+            "level": "l31",
+            "qualityMode": "constantQuality",
+            "crf": 22,
+            "averageBitrate": 2500,
+            "frameRate": "fps30",
+            "width": 1280,
+            "height": 720,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Web",
+      "presets": [
+        {
+          "name": "Web — H.264",
+          "settings": {
+            "container": "mp4",
+            "encoder": "x264",
+            "preset": "fast",
+            "tune": "fastdecode",
+            "profile": "main",
+            "level": "l40",
+            "qualityMode": "constantQuality",
+            "crf": 22,
+            "averageBitrate": 4000,
+            "frameRate": "fps30",
+            "width": 1920,
+            "height": 1080,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        },
+        {
+          "name": "Web — VP9",
+          "settings": {
+            "container": "webm",
+            "encoder": "vp9",
+            "preset": "medium",
+            "tune": "none",
+            "profile": "auto",
+            "level": "auto",
+            "qualityMode": "constantQuality",
+            "crf": 31,
+            "averageBitrate": 3000,
+            "frameRate": "fps30",
+            "width": 1920,
+            "height": 1080,
+            "autoCrop": true,
+            "cropTop": 0,
+            "cropBottom": 0,
+            "cropLeft": 0,
+            "cropRight": 0,
+            "deinterlace": "off",
+            "denoise": "off",
+            "sharpen": "off",
+            "grayscale": false,
+            "rotation": "none"
+          }
+        }
+      ]
+    }
+  ]
+}
