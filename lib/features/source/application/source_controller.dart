@@ -71,6 +71,17 @@ class SourceController extends _$SourceController {
       path: path,
       clearSummary: true,
     );
+
+    // Guard: FFmpegKit only works on Android/iOS/macOS.
+    if (!isFFmpegSupported) {
+      state = state.copyWith(
+        isBusy: false,
+        errorMessage: kUnsupportedPlatformMessage,
+        clearSummary: true,
+      );
+      return;
+    }
+
     try {
       final session = await FFprobeKit.getMediaInformation(path);
       final code = await session.getReturnCode();

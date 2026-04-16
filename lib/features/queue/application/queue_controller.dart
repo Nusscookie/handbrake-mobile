@@ -10,6 +10,7 @@ import 'package:transcoder/core/database/enums/transcode_job_status.dart';
 import 'package:transcoder/core/database/providers/application_isar_provider.dart';
 import 'package:transcoder/core/database/repositories/transcode_job_repository.dart';
 import 'package:transcoder/core/utils/ffmpeg_command_builder.dart';
+import 'package:transcoder/core/utils/platform_support.dart';
 import 'package:transcoder/features/audio/application/audio_settings_controller.dart';
 import 'package:transcoder/features/queue/domain/job_options_codec.dart';
 import 'package:transcoder/features/queue/domain/queue_state.dart';
@@ -138,6 +139,15 @@ class QueueController extends _$QueueController {
       progress: const EncodeProgress(),
     );
     await _loadJobs();
+
+    // Guard: FFmpegKit only works on Android/iOS/macOS.
+    if (!isFFmpegSupported) {
+      job.status = TranscodeJobStatus.failed;
+      job.errorMessage = kUnsupportedPlatformMessage;
+      await jobRepo.put(job);
+      await _loadJobs();
+      return;
+    }
 
     try {
       final options = JobOptionsCodec.decode(job.encodeOptionsJson);
