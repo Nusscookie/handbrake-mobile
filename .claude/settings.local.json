@@ -5,7 +5,25 @@
       "Bash(flutter analyze:*)",
       "Bash(xargs grep:*)",
       "Bash(flutter pub:*)",
-      "Bash(flutter devices:*)"
+      "Bash(flutter devices:*)",
+      "Bash(curl -s \"https://search.maven.org/solrsearch/select?q=g:com.arthenica+a:ffmpeg-kit-full-gpl&core=gav&rows=10&wt=json\")",
+      "Bash(python3 -m json.tool)",
+      "WebSearch",
+      "WebFetch(domain:mvnrepository.com)",
+      "WebFetch(domain:pub.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:repo1.maven.org)",
+      "WebFetch(domain:central.sonatype.com)",
+      "Bash(curl -s \"https://repo1.maven.org/maven2/com/arthenica/ffmpeg-kit-full-gpl/maven-metadata.xml\")",
+      "Bash(curl -s \"https://search.maven.org/solrsearch/select?q=g:com.arthenica+a:ffmpeg-kit-full-gpl&core=gav&rows=20&wt=json\")",
+      "Bash(curl -sI \"https://repo1.maven.org/maven2/com/arthenica/ffmpeg-kit-full-gpl/6.0-2/ffmpeg-kit-full-gpl-6.0-2.aar\")",
+      "Bash(curl -sI \"https://repo1.maven.org/maven2/com/arthenica/ffmpeg-kit-full-gpl/6.0-2.LTS/ffmpeg-kit-full-gpl-6.0-2.LTS.aar\")",
+      "Bash(curl -sI \"https://repo1.maven.org/maven2/com/arthenica/ffmpeg-kit-full-gpl/6.0.LTS/ffmpeg-kit-full-gpl-6.0.LTS.aar\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/sk3llo/ffmpeg_kit_flutter/master/android/build.gradle\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/SerenityS/ffmpeg_kit_flutter_new/main/android/build.gradle\")",
+      "Bash(curl -sI \"https://repo1.maven.org/maven2/com/antonkarpenko/ffmpeg-kit-full-gpl/2.1.0/ffmpeg-kit-full-gpl-2.1.0.aar\")",
+      "Bash(curl -s \"https://repo1.maven.org/maven2/com/antonkarpenko/ffmpeg-kit-full-gpl/\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/sk3llo/ffmpeg_kit_flutter/master/CHANGELOG.md\")"
     ]
   }
 }

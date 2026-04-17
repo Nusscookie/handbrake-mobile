@@ -16,10 +16,28 @@ pluginManagement {
     }
 }
 
+dependencyResolutionManagement {
+    // PREFER_SETTINGS: all sub-projects (including Flutter plugins) use these
+    // repositories. Avoids per-project repo declarations being silently ignored.
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+        }
+        // Flutter plugin AAR artifacts
+        maven {
+            url = uri("https://storage.googleapis.com/download.flutter.io")
+        }
+        // ffmpeg_kit_flutter_new native library lives on Maven Central — no extra repo needed.
+    }
+}
+
 plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
     id("com.android.application") version "8.7.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.8.22" apply false
+    id("org.jetbrains.kotlin.android") version "2.1.21" apply false
 }
 
 include(":app")

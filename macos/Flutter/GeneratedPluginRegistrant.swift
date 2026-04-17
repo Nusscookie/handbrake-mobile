@@ -5,7 +5,7 @@
 import FlutterMacOS
 import Foundation
 
-import ffmpeg_kit_flutter_full_gpl
+import ffmpeg_kit_flutter_new
 import file_picker
 import isar_flutter_libs
 import package_info_plus

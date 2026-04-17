@@ -1,5 +1,5 @@
-import 'package:ffmpeg_kit_flutter_full_gpl/media_information.dart';
-import 'package:ffmpeg_kit_flutter_full_gpl/stream_information.dart';
+import 'package:ffmpeg_kit_flutter_new/media_information.dart';
+import 'package:ffmpeg_kit_flutter_new/stream_information.dart';
 
 /// Parsed, UI-friendly view of [MediaInformation] (HandBrake-style source panel).
 class SourceProbeSummary {
